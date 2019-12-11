@@ -317,3 +317,27 @@ com.mysql.cj.exceptions.InvalidConnectionAttributeException: The server time zon
 2019-12-11 11:12:56.896  INFO 3604 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
 2019-12-11 11:12:56.982  INFO 3604 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2019-12-11 11:12:58.901  INFO 3604 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-11 11:25:54.635  INFO 11804 --- [main] hello.Application                        : Starting Application on SurfaceLaptop with PID 11804 (C:\Users\Admin\IdeaProjects\demo\target\classes started by Admin in C:\Users\Admin\IdeaProjects\demo)
+2019-12-11 11:25:54.655  INFO 11804 --- [main] hello.Application                        : No active profile set, falling back to default profiles: default
+2019-12-11 11:26:01.125  WARN 11804 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[hello]' package. Please check your configuration.
+2019-12-11 11:26:02.024  INFO 11804 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-11 11:26:02.664  INFO 11804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-12-11 11:26:02.682  INFO 11804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-11 11:26:02.683  INFO 11804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-11 11:26:03.220  INFO 11804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-11 11:26:03.222  INFO 11804 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8348 ms
+2019-12-11 11:26:04.148  INFO 11804 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-11 11:26:04.361  INFO 11804 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-11 11:26:04.384  INFO 11804 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-11 11:26:04.403  INFO 11804 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-11 11:26:04.762  INFO 11804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-12-11 11:26:04.766  INFO 11804 --- [main] hello.Application                        : Started Application in 11.22 seconds (JVM running for 13.629)
+2019-12-11 11:26:07.085  INFO 11804 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-11 11:26:07.087  INFO 11804 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-11 11:26:07.098  INFO 11804 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-12-11 11:26:46.888  WARN 11804 --- [http-nio-8888-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Invalid numeric value: Leading zeroes not allowed; nested exception is com.fasterxml.jackson.core.JsonParseException: Invalid numeric value: Leading zeroes not allowed
+ at [Source: (PushbackInputStream); line: 3, column: 10]]
+2019-12-11 11:27:02.495  WARN 11804 --- [http-nio-8888-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+ at [Source: (PushbackInputStream); line: 5, column: 2]]
+2019-12-11 11:27:11.311  INFO 11804 --- [http-nio-8888-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-11 11:27:12.080  INFO 11804 --- [http-nio-8888-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
