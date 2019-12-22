@@ -23,8 +23,8 @@ public class Demo {
     }
 
     @RequestMapping(value = "/addUser",method = RequestMethod.POST)
-    public int addUser(@RequestBody User user){
-        int result = template.insert("addUser",user);
+    public int addUser(@RequestBody User user) {
+        int result = template.insert("addUser", user);
         return result;
     }
 

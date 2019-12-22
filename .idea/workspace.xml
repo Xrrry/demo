@@ -10,12 +10,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mylog.log" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/server/MyPostMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/server/MyPostMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/mysql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/mysql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/server/MyPostMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/server/MyPostMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/mysql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/mysql.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +153,9 @@
       <workItem from="1575977773201" duration="3111000" />
       <workItem from="1575981357164" duration="1550000" />
       <workItem from="1576030968182" duration="4284000" />
-      <workItem from="1576066304139" duration="2866000" />
+      <workItem from="1576066304139" duration="4754000" />
+      <workItem from="1576136152102" duration="3932000" />
+      <workItem from="1576207210622" duration="600000" />
     </task>
     <servers />
   </component>

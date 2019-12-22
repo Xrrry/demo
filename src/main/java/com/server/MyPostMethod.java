@@ -45,7 +45,7 @@ public class MyPostMethod {
                     && u.getPassword().equals("123")
             ){
                 user = new User();
-                user.setName("xxx");
+                user.setUserName("xxx");
                 user.setAge("18");
                 user.setSex("man");
                 return  user.toString();
