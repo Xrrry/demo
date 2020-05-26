@@ -1,0 +1,12 @@
+com\bean\Producer.class
+com\controller\SecondController.class
+com\server\MyGetMethod.class
+com\bean\Commodity.class
+com\config\SwaggerConfig.class
+com\bean\SearchDetail.class
+com\bean\Sell.class
+com\bean\User.class
+com\server\MyPostMethod.class
+com\controller\Demo.class
+hello\Application.class
+com\bean\Out.class

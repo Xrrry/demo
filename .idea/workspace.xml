@@ -7,15 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44a503d0-5d5a-4ca4-99e2-62f60a1f4279" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/Commodity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/Out.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/Producer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/SearchDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/Sell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.log" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/server/MyPostMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/server/MyPostMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/mysql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/mysql.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/server/MyPostMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/server/MyPostMethod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/mysql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/mysql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +57,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1UjBvO0d7trcZJzb9srVCEaasch" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -66,11 +78,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/WeChat Files/xryxryxryxryxryxryx/FileStorage/File/2020-03/新建文件夹 (2)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
@@ -156,6 +169,23 @@
       <workItem from="1576066304139" duration="4754000" />
       <workItem from="1576136152102" duration="3932000" />
       <workItem from="1576207210622" duration="600000" />
+      <workItem from="1583156068439" duration="88000" />
+      <workItem from="1583156437329" duration="692000" />
+      <workItem from="1584514598550" duration="1000" />
+      <workItem from="1584514696836" duration="495000" />
+      <workItem from="1585531841593" duration="35000" />
+      <workItem from="1585532016008" duration="10000" />
+      <workItem from="1586320028215" duration="2000000" />
+      <workItem from="1589264174162" duration="1000" />
+      <workItem from="1589265356182" duration="1278000" />
+      <workItem from="1590315457185" duration="3761000" />
+      <workItem from="1590323324070" duration="440000" />
+      <workItem from="1590323790916" duration="262000" />
+      <workItem from="1590324084645" duration="909000" />
+      <workItem from="1590325015644" duration="3713000" />
+      <workItem from="1590379428780" duration="3192000" />
+      <workItem from="1590492859811" duration="999000" />
+      <workItem from="1590496294075" duration="4055000" />
     </task>
     <servers />
   </component>

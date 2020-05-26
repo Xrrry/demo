@@ -7,6 +7,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @Api(value = "/",description = "这是我的第一个版本的demo")
 public class Demo {
@@ -30,14 +31,18 @@ public class Demo {
 
     @RequestMapping(value = "/updateUser",method = RequestMethod.POST)
     public int updateUser(@RequestBody User user){
-
         return  template.update("updateUser",user);
-
     }
 
     @RequestMapping(value = "/deleteUser",method = RequestMethod.GET)
     public int delUser(@RequestParam int id){
         return template.delete("deleteUser",id);
+    }
+
+    @RequestMapping(value = "/query",method = RequestMethod.GET)
+    public String query(@RequestParam String out_id){
+        SecondController s = new SecondController();
+        return s.theQuery(out_id);
     }
 
 }
