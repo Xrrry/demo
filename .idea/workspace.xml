@@ -7,20 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44a503d0-5d5a-4ca4-99e2-62f60a1f4279" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/Commodity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/Out.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/Producer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/SearchDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/Sell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bean/Commodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bean/Commodity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bean/Out.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bean/Out.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bean/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bean/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bean/SearchDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bean/SearchDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bean/Sell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bean/Sell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bean/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bean/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bean/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +183,18 @@
       <workItem from="1590379428780" duration="3192000" />
       <workItem from="1590492859811" duration="999000" />
       <workItem from="1590496294075" duration="4055000" />
+      <workItem from="1590501563520" duration="166000" />
+      <workItem from="1590582484879" duration="1752000" />
+      <workItem from="1590584278664" duration="4094000" />
     </task>
+    <task id="LOCAL-00001" summary="二级api基本打通/返回格式处理">
+      <created>1590501646307</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590501646308</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,5 +215,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="二级api基本打通/返回格式处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="二级api基本打通/返回格式处理" />
   </component>
 </project>
