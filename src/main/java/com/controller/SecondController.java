@@ -26,6 +26,7 @@ public class SecondController {
                 .build();
         String outResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryOut",outFormBody));
         Out out = gson.fromJson(outResult, Out.class);
+        System.out.println(out.toString());
         RequestBody commodityFormBody = new FormBody.Builder()
                 .add("pro_acc",out.getPro_acc())
                 .add("com_id",out.getCom_id())
@@ -39,15 +40,32 @@ public class SecondController {
                 .build();
         String commodityResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryCommodity",commodityFormBody));
         Commodity commodity = gson.fromJson(commodityResult, Commodity.class);
+        System.out.println(commodity.toString());
         String producerResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryProducer",producerFormBody));
         Producer producer = gson.fromJson(producerResult, Producer.class);
+        System.out.println(producer.toString());
         String sellResult = transformJson(getJsonData("http://112.126.96.134:8888/test/querySell",sellFormBody));
         Sell sell = gson.fromJson(sellResult, Sell.class);
+        System.out.println(sell.toString());
+        RequestBody salerFormBody = new FormBody.Builder()
+                .add("sal_acc",sell.getSell_sal_acc())
+                .build();
+        RequestBody customerFormBody = new FormBody.Builder()
+                .add("cus_acc",sell.getSell_cus_acc())
+                .build();
+        String salerResult = transformJson(getJsonData("http://112.126.96.134:8888/test/querySaler",salerFormBody));
+        Saler saler = gson.fromJson(salerResult,Saler.class);
+        System.out.println(saler.toString());
+        String customerResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryCustomer",customerFormBody));
+        Customer customer = gson.fromJson(customerResult,Customer.class);
+        System.out.println(customer.toString());
         SearchDetail searchDetail = new SearchDetail(out.getOut_id(), out.getCom_id(), out.getPro_acc(),
                 out.getOut_birthday(), producer.getNickname(), commodity.getCom_name(), commodity.getCom_cate(),
-                commodity.getCom_price(),sell.getSell_id(),sell.getSell_sal_acc(),sell.getSell_cus_acc(),sell.getSell_track_num());
+                commodity.getCom_price(),commodity.getCom_place(),sell.getSell_id(),sell.getSell_sal_acc(),saler.getSal_nickname(),
+                saler.getSal_cred(),saler.getSal_cnt(),sell.getSell_time(),
+                sell.getSell_cus_acc(),customer.getCus_nickname(),sell.getSell_track_num());
         System.out.println(searchDetail);
-        return searchDetail.toString();
+        return gson.toJson(searchDetail);
     }
 
     public String transformJson(String s){

@@ -39,7 +39,7 @@ public class Demo {
         return template.delete("deleteUser",id);
     }
 
-    @RequestMapping(value = "/query",method = RequestMethod.GET)
+    @RequestMapping(value = "/query",method = RequestMethod.POST)
     public String query(@RequestParam String out_id){
         SecondController s = new SecondController();
         return s.theQuery(out_id);

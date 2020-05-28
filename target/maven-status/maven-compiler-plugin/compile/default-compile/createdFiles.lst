@@ -1,8 +1,10 @@
+com\bean\Customer.class
 com\bean\Producer.class
 com\controller\SecondController.class
 com\server\MyGetMethod.class
 com\bean\Commodity.class
 com\config\SwaggerConfig.class
+com\bean\Saler.class
 com\bean\SearchDetail.class
 com\bean\Sell.class
 com\bean\User.class
