@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 @Data
 @ToString
 @AllArgsConstructor
@@ -17,7 +19,10 @@ public class SearchDetail {
     private String com_cate; //商品类型
     private String com_price; //商品价格
     private String com_place; //产品产地
-    private String sell_id; //卖出信息id
+    private Integer all_sell_count; //所有卖出次数
+    private List<String> all_sell_time; //所有卖出时间
+    //以下先只传最后一次的信息
+    private String sell_id; // 卖出信息id
     private String sell_sal_acc; //卖家id
     private String sal_nickname; //卖家昵称
     private String sal_cred; //卖家平均信誉

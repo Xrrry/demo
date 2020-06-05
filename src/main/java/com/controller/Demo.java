@@ -42,7 +42,19 @@ public class Demo {
     @RequestMapping(value = "/query",method = RequestMethod.POST)
     public String query(@RequestParam String out_id){
         SecondController s = new SecondController();
-        return s.theQuery(out_id);
+        return s.query(out_id);
+    }
+
+    @RequestMapping(value = "/perHistory",method = RequestMethod.POST)
+    public String perHistory(@RequestParam String cus_acc){
+        SecondController s = new SecondController();
+        return s.perAllHistory(cus_acc);
+    }
+
+    @RequestMapping(value = "/loginSearch",method = RequestMethod.POST)
+    public String loginSearch(@RequestParam String phone){
+        SecondController s = new SecondController();
+        return s.loginSearch(phone);
     }
 
 }
