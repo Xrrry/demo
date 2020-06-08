@@ -56,5 +56,9 @@ public class Demo {
         SecondController s = new SecondController();
         return s.loginSearch(phone);
     }
-
+    @RequestMapping(value = "/upCom",method = RequestMethod.POST)
+    public String upCom(@RequestParam String pro_acc, String name, String type, String price, String locate){
+        SecondController s = new SecondController();
+        return s.upCom(pro_acc,name,type,price,locate);
+    }
 }

@@ -88,6 +88,28 @@ public class SecondController {
                 .build();
         return transformJson(getJsonData("http://112.126.96.134:8888/test/queryUser",loginFormBody));
     }
+    String upCom(String pro_acc, String name, String type, String price, String locate) {
+        Gson gson = new Gson();
+        RequestBody countFormBody = new FormBody.Builder()
+                .add("typename","count")
+                .build();
+        String countResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryCount",countFormBody));
+        Count count = gson.fromJson(countResult,Count.class);
+        RequestBody upFormBody = new FormBody.Builder()
+                .add("pro_acc",pro_acc)
+                .add("com_id",count.getCount())
+                .add("com_name",name)
+                .add("com_cate",type)
+                .add("com_price",price)
+                .add("com_place",locate)
+                .build();
+        RequestBody updateCountFormBody = new FormBody.Builder()
+                .add("typename","count")
+                .add("value",String.valueOf(Integer.parseInt(count.getCount())+1))
+                .build();
+        getJsonData("http://112.126.96.134:8888/test/updateCount",updateCountFormBody);
+        return getJsonData("http://112.126.96.134:8888/test/upCommodity",upFormBody);
+    }
 
     public String transformJson(String s){
         String string = s.substring(6);
