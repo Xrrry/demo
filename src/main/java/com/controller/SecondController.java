@@ -82,6 +82,12 @@ public class SecondController {
                 .build();
         return transformJson(getJsonData("http://112.126.96.134:8888/test/queryPerAllHistory",hisFormBody));
     }
+    String proCom(String pro_acc) {
+        RequestBody comFormBody = new FormBody.Builder()
+                .add("pro_acc",pro_acc)
+                .build();
+        return transformJson(getJsonData("http://112.126.96.134:8888/test/queryAllCommodity",comFormBody));
+    }
     String loginSearch(String phone) {
         RequestBody loginFormBody = new FormBody.Builder()
                 .add("user_id",phone)

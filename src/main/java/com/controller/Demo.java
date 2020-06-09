@@ -51,6 +51,12 @@ public class Demo {
         return s.perAllHistory(cus_acc);
     }
 
+    @RequestMapping(value = "/proCom",method = RequestMethod.POST)
+    public String proCom(@RequestParam String pro_acc){
+        SecondController s = new SecondController();
+        return s.proCom(pro_acc);
+    }
+
     @RequestMapping(value = "/loginSearch",method = RequestMethod.POST)
     public String loginSearch(@RequestParam String phone){
         SecondController s = new SecondController();

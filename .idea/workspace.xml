@@ -7,17 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44a503d0-5d5a-4ca4-99e2-62f60a1f4279" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mylog.log.2020-06-05.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/Count.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylog.log.2020-06-08.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mylog.log" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.log.2020-05-31.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +187,8 @@
       <workItem from="1590930162355" duration="3562000" />
       <workItem from="1591275629152" duration="906000" />
       <workItem from="1591361609233" duration="4446000" />
-      <workItem from="1591625734667" duration="2355000" />
+      <workItem from="1591625734667" duration="2405000" />
+      <workItem from="1591715162603" duration="710000" />
     </task>
     <task id="LOCAL-00001" summary="二级api基本打通/返回格式处理">
       <created>1590501646307</created>
@@ -220,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591367199743</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="upPreCom完成">
+      <created>1591628118064</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591628118064</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +250,7 @@
     <MESSAGE value="searchdetail汇总完成/解决实体与json与实体转换问题" />
     <MESSAGE value="searchDetail格式同步" />
     <MESSAGE value="perHistory/loginSearch" />
-    <option name="LAST_COMMIT_MESSAGE" value="perHistory/loginSearch" />
+    <MESSAGE value="upPreCom完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="upPreCom完成" />
   </component>
 </project>
