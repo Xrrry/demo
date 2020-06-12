@@ -39,30 +39,36 @@ public class Demo {
         return template.delete("deleteUser",id);
     }
 
-    @RequestMapping(value = "/query",method = RequestMethod.POST)
+    @RequestMapping(value = "/query",method = RequestMethod.POST) // 用户查询
     public String query(@RequestParam String out_id){
         SecondController s = new SecondController();
         return s.query(out_id);
     }
 
-    @RequestMapping(value = "/perHistory",method = RequestMethod.POST)
+    @RequestMapping(value = "/perHistory",method = RequestMethod.POST) // 查询记录
     public String perHistory(@RequestParam String cus_acc){
         SecondController s = new SecondController();
         return s.perAllHistory(cus_acc);
     }
 
-    @RequestMapping(value = "/proCom",method = RequestMethod.POST)
-    public String proCom(@RequestParam String pro_acc){
+    @RequestMapping(value = "/proAllCom",method = RequestMethod.POST) // 厂商所有模板
+    public String proAllCom(@RequestParam String pro_acc){
         SecondController s = new SecondController();
-        return s.proCom(pro_acc);
+        return s.proAllCom(pro_acc);
     }
 
-    @RequestMapping(value = "/loginSearch",method = RequestMethod.POST)
+    @RequestMapping(value = "/upOut",method = RequestMethod.POST) // 厂商上传出库
+    public String upOut (@RequestParam String out_id,String pro_acc, String com_id, String out_time){
+        SecondController s = new SecondController();
+        return s.upOut(out_id,pro_acc,com_id,out_time);
+    }
+
+    @RequestMapping(value = "/loginSearch",method = RequestMethod.POST) // 登录验证
     public String loginSearch(@RequestParam String phone){
         SecondController s = new SecondController();
         return s.loginSearch(phone);
     }
-    @RequestMapping(value = "/upCom",method = RequestMethod.POST)
+    @RequestMapping(value = "/upCom",method = RequestMethod.POST) // 上传模板
     public String upCom(@RequestParam String pro_acc, String name, String type, String price, String locate){
         SecondController s = new SecondController();
         return s.upCom(pro_acc,name,type,price,locate);
