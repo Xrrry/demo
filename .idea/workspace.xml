@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44a503d0-5d5a-4ca4-99e2-62f60a1f4279" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mylog.log.2020-06-09.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.log" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" afterDir="false" />
@@ -190,7 +188,8 @@
       <workItem from="1591625734667" duration="2405000" />
       <workItem from="1591715162603" duration="764000" />
       <workItem from="1591884018936" duration="1829000" />
-      <workItem from="1591969336647" duration="2698000" />
+      <workItem from="1591969336647" duration="3322000" />
+      <workItem from="1592057673218" duration="1420000" />
     </task>
     <task id="LOCAL-00001" summary="二级api基本打通/返回格式处理">
       <created>1590501646307</created>
@@ -234,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591715899806</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="upOut完成">
+      <created>1591972211214</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591972211214</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +267,7 @@
     <MESSAGE value="perHistory/loginSearch" />
     <MESSAGE value="upPreCom完成" />
     <MESSAGE value="upOut" />
-    <option name="LAST_COMMIT_MESSAGE" value="upOut" />
+    <MESSAGE value="upOut完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="upOut完成" />
   </component>
 </project>

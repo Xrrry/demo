@@ -73,4 +73,9 @@ public class Demo {
         SecondController s = new SecondController();
         return s.upCom(pro_acc,name,type,price,locate);
     }
+    @RequestMapping(value = "/auth",method = RequestMethod.POST) // 上传模板
+    public String auth(@RequestParam String user_id, String type, String content){
+        SecondController s = new SecondController();
+        return s.auth(user_id,type,content);
+    }
 }

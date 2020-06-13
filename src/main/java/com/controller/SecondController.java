@@ -97,12 +97,21 @@ public class SecondController {
                 .build();
         return getJsonData("http://112.126.96.134:8888/test/upOut",outFormBody);
     }
+
     String loginSearch(String phone) {
         RequestBody loginFormBody = new FormBody.Builder()
                 .add("user_id",phone)
                 .build();
         return transformJson(getJsonData("http://112.126.96.134:8888/test/queryUser",loginFormBody));
     }
+    String auth(String user_id,String type,String content) {
+        RequestBody authFormBody = new FormBody.Builder()
+                .add("user_id",user_id)
+                .add("user_type",type)
+                .build();
+        return getJsonData("http://112.126.96.134:8888/test/upTempUser",authFormBody);
+    }
+
     String upCom(String pro_acc, String name, String type, String price, String locate) {
         Gson gson = new Gson();
         RequestBody countFormBody = new FormBody.Builder()
@@ -125,24 +134,22 @@ public class SecondController {
         getJsonData("http://112.126.96.134:8888/test/updateCount",updateCountFormBody);
         return getJsonData("http://112.126.96.134:8888/test/upCommodity",upFormBody);
     }
+    public List<String> sellAlltransform(String s){
+        int count = Integer.parseInt(s.substring(6,7));
+        String[] sList = s.split("value3=");
+        List<String> sResult = new ArrayList<String>();
+        for (int i=1;i<sList.length;i++) {
+            sResult.add(sList[i].substring(0,10));
+        }
+        System.out.println(sResult);
+        return sResult;
+    }
 
     public String transformJson(String s){
         String string = s.substring(6);
         string = string.replace("{","{\"").replace("}","\"}");
         string = string.replaceAll("=","\":\"").replaceAll(", ","\",\"");
         return string;
-    }
-
-    public List<String> sellAlltransform(String s){
-        int count = Integer.parseInt(s.substring(6,7));
-        String[] sList = s.split("value3=");
-        List<String> sResult = new ArrayList<String>();
-        for (int i=1;i<sList.length;i++) {
-//            System.out.println(sList[i]);
-            sResult.add(sList[i].substring(0,10));
-        }
-        System.out.println(sResult);
-        return sResult;
     }
 
     public static String getJsonData(String urlStr,RequestBody formBody) {
