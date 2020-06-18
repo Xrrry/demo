@@ -55,6 +55,16 @@ public class Demo {
         SecondController s = new SecondController();
         return s.perAllHistory(cus_acc);
     }
+    @RequestMapping(value = "/sellHistory",method = RequestMethod.POST) // 卖出记录
+    public String sellHistory(@RequestParam String sal_acc){
+        SecondController s = new SecondController();
+        return s.sellAllHistory(sal_acc);
+    }
+    @RequestMapping(value = "/outHistory",method = RequestMethod.POST) // 出库记录
+    public String outHistory(@RequestParam String pro_acc){
+        SecondController s = new SecondController();
+        return s.outAllHistory(pro_acc);
+    }
 
     @RequestMapping(value = "/proAllCom",method = RequestMethod.POST) // 厂商所有模板
     public String proAllCom(@RequestParam String pro_acc){

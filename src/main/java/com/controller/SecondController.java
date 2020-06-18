@@ -82,6 +82,19 @@ public class SecondController {
                 .build();
         return transformJson(getJsonData("http://112.126.96.134:8888/test/queryPerAllHistory",hisFormBody));
     }
+    String sellAllHistory(String sal_acc) {
+        RequestBody hisFormBody = new FormBody.Builder()
+                .add("his_out_id",sal_acc)
+                .build();
+        return transformJson(getJsonData("http://112.126.96.134:8888/test/queryAllSellHistory",hisFormBody));
+    }
+    String outAllHistory(String pro_acc) {
+        RequestBody hisFormBody = new FormBody.Builder()
+                .add("his_out_id",pro_acc)
+                .build();
+        return transformJson(getJsonData("http://112.126.96.134:8888/test/queryAllOutHistory",hisFormBody));
+    }
+
     String proAllCom(String pro_acc) {
         RequestBody comFormBody = new FormBody.Builder()
                 .add("pro_acc",pro_acc)
