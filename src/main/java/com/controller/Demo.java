@@ -44,6 +44,11 @@ public class Demo {
         SecondController s = new SecondController();
         return s.query(out_id);
     }
+    @RequestMapping(value = "/queryHistory",method = RequestMethod.POST) // 用户查询
+    public String queryHistory(@RequestParam String out_id){
+        SecondController s = new SecondController();
+        return s.query(out_id);
+    }
 
     @RequestMapping(value = "/perHistory",method = RequestMethod.POST) // 查询记录
     public String perHistory(@RequestParam String cus_acc){
@@ -73,9 +78,20 @@ public class Demo {
         SecondController s = new SecondController();
         return s.upCom(pro_acc,name,type,price,locate);
     }
-    @RequestMapping(value = "/auth",method = RequestMethod.POST) // 上传模板
+    @RequestMapping(value = "/auth",method = RequestMethod.POST) // 身份验证
     public String auth(@RequestParam String user_id, String type, String content){
         SecondController s = new SecondController();
         return s.auth(user_id,type,content);
+    }
+    @RequestMapping(value = "/feedback",method = RequestMethod.POST) // 反馈
+    public String feedback(@RequestParam String user_id, String content){
+        SecondController s = new SecondController();
+        return s.feedback(user_id,content);
+    }
+    @RequestMapping(value = "/upSell",method = RequestMethod.POST) // 反馈
+    public String upSell(@RequestParam String sell_id, String sell_time, String sell_sal_acc, String sell_cus_acc,
+                         String sell_track_num){
+        SecondController s = new SecondController();
+        return s.upSell(sell_id,sell_time,sell_sal_acc,sell_cus_acc,sell_track_num);
     }
 }

@@ -97,6 +97,17 @@ public class SecondController {
                 .build();
         return getJsonData("http://112.126.96.134:8888/test/upOut",outFormBody);
     }
+    String upSell(String sell_id, String sell_time, String sell_sal_acc, String sell_cus_acc,
+                  String sell_track_num) {
+        RequestBody sellFormBody = new FormBody.Builder()
+                .add("sell_id",sell_id)
+                .add("sell_time",sell_time)
+                .add("sell_sal_acc",sell_sal_acc)
+                .add("sell_cus_acc",sell_cus_acc)
+                .add("sell_track_num",sell_track_num)
+                .build();
+        return getJsonData("http://112.126.96.134:8888/test/upSell",sellFormBody);
+    }
 
     String loginSearch(String phone) {
         RequestBody loginFormBody = new FormBody.Builder()
@@ -110,6 +121,13 @@ public class SecondController {
                 .add("user_type",type)
                 .build();
         return getJsonData("http://112.126.96.134:8888/test/upTempUser",authFormBody);
+    }
+    String feedback(String user_id, String content) {
+        RequestBody feedbackFormBody = new FormBody.Builder()
+                .add("user_id",user_id)
+                .add("content",content)
+                .build();
+        return getJsonData("http://112.126.96.134:8888/test/upContent",feedbackFormBody);
     }
 
     String upCom(String pro_acc, String name, String type, String price, String locate) {
