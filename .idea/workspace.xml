@@ -8,9 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="44a503d0-5d5a-4ca4-99e2-62f60a1f4279" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
@@ -192,7 +190,8 @@
       <workItem from="1592057673218" duration="1462000" />
       <workItem from="1592314306210" duration="586000" />
       <workItem from="1592314924841" duration="2217000" />
-      <workItem from="1592487207488" duration="3943000" />
+      <workItem from="1592487207488" duration="3992000" />
+      <workItem from="1592579694855" duration="1230000" />
     </task>
     <task id="LOCAL-00001" summary="二级api基本打通/返回格式处理">
       <created>1590501646307</created>
@@ -257,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592489238316</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="SellHistory/OutHistory初写">
+      <created>1592495178712</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1592495178712</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +293,7 @@
     <MESSAGE value="upOut完成" />
     <MESSAGE value="身份验证完成" />
     <MESSAGE value="upSell完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="upSell完成" />
+    <MESSAGE value="SellHistory/OutHistory初写" />
+    <option name="LAST_COMMIT_MESSAGE" value="SellHistory/OutHistory初写" />
   </component>
 </project>
