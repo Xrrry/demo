@@ -78,6 +78,13 @@ public class Demo {
         return s.upOut(out_id,pro_acc,com_id,out_time);
     }
 
+    @RequestMapping(value = "/upSell",method = RequestMethod.POST) // 卖出
+    public String upSell(@RequestParam String sell_id, String sell_time, String sell_sal_acc, String sell_cus_acc,
+                         String sell_track_num){
+        SecondController s = new SecondController();
+        return s.upSell(sell_id,sell_time,sell_sal_acc,sell_cus_acc,sell_track_num);
+    }
+
     @RequestMapping(value = "/loginSearch",method = RequestMethod.POST) // 登录验证
     public String loginSearch(@RequestParam String phone){
         SecondController s = new SecondController();
@@ -98,10 +105,9 @@ public class Demo {
         SecondController s = new SecondController();
         return s.feedback(user_id,content);
     }
-    @RequestMapping(value = "/upSell",method = RequestMethod.POST) // 反馈
-    public String upSell(@RequestParam String sell_id, String sell_time, String sell_sal_acc, String sell_cus_acc,
-                         String sell_track_num){
+    @RequestMapping(value = "/modi",method = RequestMethod.POST) // 反馈
+    public String modi(@RequestParam String type, String user_id, String nickname){
         SecondController s = new SecondController();
-        return s.upSell(sell_id,sell_time,sell_sal_acc,sell_cus_acc,sell_track_num);
+        return s.modi(type, user_id,nickname);
     }
 }

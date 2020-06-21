@@ -142,6 +142,37 @@ public class SecondController {
                 .build();
         return getJsonData("http://112.126.96.134:8888/test/upContent",feedbackFormBody);
     }
+    String modi(String type, String user_id, String nickname) {
+        if(type.equals("1")) {
+            RequestBody modiFormBody = new FormBody.Builder()
+                    .add("cus_acc",user_id)
+                    .add("cus_nickname",nickname)
+                    .build();
+            return getJsonData("http://112.126.96.134:8888/test/updateCustomer",modiFormBody);
+        }
+        else if(type.equals("2")) {
+            RequestBody modiFormBody = new FormBody.Builder()
+                    .add("pro_acc",user_id)
+                    .add("pro_nickname",nickname)
+                    .build();
+            return getJsonData("http://112.126.96.134:8888/test/updateProducer",modiFormBody);
+        }
+        else {
+            RequestBody salFormBody = new FormBody.Builder()
+                    .add("sal_acc",user_id)
+                    .build();
+            Gson gson = new Gson();
+            String s = transformJson(getJsonData("http://112.126.96.134:8888/test/querySaler",salFormBody));
+            Saler saler = gson.fromJson(s, Saler.class);
+            RequestBody modiFormBody = new FormBody.Builder()
+                    .add("sal_acc",user_id)
+                    .add("sal_nickname",nickname)
+                    .add("sal_cred",saler.getSal_cred())
+                    .add("sal_cnt",saler.getSal_cnt())
+                    .build();
+            return getJsonData("http://112.126.96.134:8888/test/updateSaler",modiFormBody);
+        }
+    }
 
     String upCom(String pro_acc, String name, String type, String price, String locate) {
         Gson gson = new Gson();
