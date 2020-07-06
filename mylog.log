@@ -1,18 +1,2 @@
-2020-06-11 22:05:15.809  INFO 16824 --- [main] hello.Application                        : Starting Application on SurfaceLaptop with PID 16824 (C:\Users\Admin\IdeaProjects\demo\target\classes started by Admin in C:\Users\Admin\IdeaProjects\demo)
-2020-06-11 22:05:15.928  INFO 16824 --- [main] hello.Application                        : No active profile set, falling back to default profiles: default
-2020-06-11 22:05:23.683  WARN 16824 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[hello]' package. Please check your configuration.
-2020-06-11 22:05:24.065  INFO 16824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-11 22:05:24.420  INFO 16824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-2020-06-11 22:05:24.433  INFO 16824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-06-11 22:05:24.434  INFO 16824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-06-11 22:05:24.586  INFO 16824 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-06-11 22:05:24.586  INFO 16824 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8538 ms
-2020-06-11 22:05:25.529  INFO 16824 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-11 22:05:25.745  INFO 16824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-06-11 22:05:25.765  INFO 16824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-06-11 22:05:25.778  INFO 16824 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-06-11 22:05:26.080  INFO 16824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-2020-06-11 22:05:26.083  INFO 16824 --- [main] hello.Application                        : Started Application in 11.65 seconds (JVM running for 14.458)
-2020-06-11 22:05:31.481  INFO 16824 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-11 22:05:31.482  INFO 16824 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-06-11 22:05:31.497  INFO 16824 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-07-06 23:25:36.847  INFO 13536 --- [main] hello.Application                        : Starting Application on SurfaceLaptop with PID 13536 (C:\Users\Admin\IdeaProjects\demo\target\classes started by Admin in C:\Users\Admin\IdeaProjects\demo)
+2020-07-06 23:25:36.898  INFO 13536 --- [main] hello.Application                        : No active profile set, falling back to default profiles: default

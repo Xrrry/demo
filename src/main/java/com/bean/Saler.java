@@ -14,11 +14,9 @@ public class Saler {
     @SerializedName("value2")
     private String sal_acc;
     @SerializedName("value3")
-    private String sal_pwd;
-    @SerializedName("value4")
     private String sal_nickname;
-    @SerializedName("value5")
+    @SerializedName("value4")
     private String sal_cred;
-    @SerializedName("value6")
+    @SerializedName("value5")
     private String sal_cnt;
 }

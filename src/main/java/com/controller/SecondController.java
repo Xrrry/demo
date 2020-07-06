@@ -68,7 +68,7 @@ public class SecondController {
         Customer customer = gson.fromJson(customerResult,Customer.class);
         System.out.println(customer.toString());
         SearchDetail searchDetail = new SearchDetail(out.getOut_id(), out.getCom_id(), out.getPro_acc(),
-                out.getOut_birthday(), producer.getNickname(), commodity.getCom_name(), commodity.getCom_cate(),
+                out.getOut_birthday(), producer.getPro_nickname(), commodity.getCom_name(), commodity.getCom_cate(),
                 commodity.getCom_price(),commodity.getCom_place(),ss.size(),ss,sell.getSell_id(),sell.getSell_sal_acc(),saler.getSal_nickname(),
                 saler.getSal_cred(),saler.getSal_cnt(),sell.getSell_time(),
                 sell.getSell_cus_acc(),customer.getCus_nickname(),sell.getSell_track_num());

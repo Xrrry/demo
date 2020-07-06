@@ -10,7 +10,5 @@ public class Producer {
     @SerializedName("value2")
     private String pro_acc;
     @SerializedName("value3")
-    private String pro_pwd;
-    @SerializedName("value4")
-    private String nickname;
+    private String pro_nickname;
 }

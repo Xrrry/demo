@@ -14,9 +14,5 @@ public class Customer {
     @SerializedName("value2")
     private String cus_acc;
     @SerializedName("value3")
-    private String cus_pwd;
-    @SerializedName("value4")
     private String cus_nickname;
-    @SerializedName("value5")
-    private String cus_sex;
 }
