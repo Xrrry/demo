@@ -44,7 +44,7 @@ public class Demo {
         SecondController s = new SecondController();
         return s.query(out_id);
     }
-    @RequestMapping(value = "/queryHistory",method = RequestMethod.POST) // 用户查询
+    @RequestMapping(value = "/queryHistory",method = RequestMethod.POST) // 历史查询
     public String queryHistory(@RequestParam String out_id){
         SecondController s = new SecondController();
         return s.query(out_id);
@@ -105,9 +105,14 @@ public class Demo {
         SecondController s = new SecondController();
         return s.feedback(user_id,content);
     }
-    @RequestMapping(value = "/modi",method = RequestMethod.POST) // 反馈
+    @RequestMapping(value = "/modi",method = RequestMethod.POST) // 修改
     public String modi(@RequestParam String type, String user_id, String nickname){
         SecondController s = new SecondController();
         return s.modi(type, user_id,nickname);
+    }
+    @RequestMapping(value = "/ranklist",method = RequestMethod.POST) // 修改
+    public String rank(){
+        SecondController s = new SecondController();
+        return s.rank();
     }
 }

@@ -4,6 +4,7 @@ import com.bean.*;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import io.swagger.models.auth.In;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
@@ -15,8 +16,7 @@ import okhttp3.Response;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class SecondController {
 
@@ -121,6 +121,19 @@ public class SecondController {
                 .build();
         return getJsonData("http://112.126.96.134:8888/test/upSell",sellFormBody);
     }
+    String rank(){
+        RequestBody rankFormBody = new FormBody.Builder().build();
+        Gson gson = new Gson();
+        List<String> sList = listTransform(getJsonData("http://112.126.96.134:8888/test/queryAllSaler",rankFormBody));
+        List<Saler> salerList = new ArrayList<Saler>();
+        for (String item : sList) {
+            salerList.add(gson.fromJson(item,Saler.class));
+        }
+        salerList.sort(Comparator.comparingInt(x -> Integer.parseInt(x.getSal_total())));
+        Collections.reverse(salerList);
+        System.out.println(salerList.toString());
+        return sList.toString();
+    }
 
     String loginSearch(String phone) {
         RequestBody loginFormBody = new FormBody.Builder()
@@ -202,6 +215,17 @@ public class SecondController {
         List<String> sResult = new ArrayList<String>();
         for (int i=1;i<sList.length;i++) {
             sResult.add(sList[i].substring(0,10));
+        }
+        System.out.println(sResult);
+        return sResult;
+    }
+    public List<String> listTransform(String s) {
+        int count = Integer.parseInt(s.substring(6,7));
+        String ss = s.substring(8);
+        String[] sList = ss.split("}");
+        List<String> sResult = new ArrayList<String>();
+        for (String item : sList) {
+            sResult.add(transformJson(item + "}"));
         }
         System.out.println(sResult);
         return sResult;

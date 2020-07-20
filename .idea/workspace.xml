@@ -7,15 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44a503d0-5d5a-4ca4-99e2-62f60a1f4279" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mylog.log.2020-07-06.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mylog.log" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.log.2020-06-05.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.log.2020-06-08.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.log.2020-06-09.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bean/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bean/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bean/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bean/Producer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bean/Saler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bean/Saler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
@@ -200,7 +198,8 @@
       <workItem from="1592487207488" duration="3992000" />
       <workItem from="1592579694855" duration="2112000" />
       <workItem from="1592752314888" duration="3061000" />
-      <workItem from="1594048479393" duration="1392000" />
+      <workItem from="1594048479393" duration="1483000" />
+      <workItem from="1595253646491" duration="3433000" />
     </task>
     <task id="LOCAL-00001" summary="二级api基本打通/返回格式处理">
       <created>1590501646307</created>
@@ -286,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592757362623</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="身份model同步修改">
+      <created>1594049935721</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1594049935721</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +335,7 @@
     <MESSAGE value="SellHistory/OutHistory初写" />
     <MESSAGE value="SellHistory/OutHistory完成" />
     <MESSAGE value="修改个人信息完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改个人信息完成" />
+    <MESSAGE value="身份model同步修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="身份model同步修改" />
   </component>
 </project>

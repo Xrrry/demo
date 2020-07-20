@@ -19,4 +19,6 @@ public class Saler {
     private String sal_cred;
     @SerializedName("value5")
     private String sal_cnt;
+    @SerializedName("value6")
+    private String sal_total;
 }
