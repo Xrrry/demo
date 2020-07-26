@@ -16,6 +16,7 @@ import okhttp3.Response;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class SecondController {
@@ -129,10 +130,15 @@ public class SecondController {
         for (String item : sList) {
             salerList.add(gson.fromJson(item,Saler.class));
         }
-        salerList.sort(Comparator.comparingInt(x -> Integer.parseInt(x.getSal_total())));
+        salerList.sort(Comparator.comparingInt(x -> Integer.parseInt(x.getSal_cred())));
         Collections.reverse(salerList);
         System.out.println(salerList.toString());
-        return sList.toString();
+        List<String> finalList = new ArrayList<String>();
+        for(Saler item:salerList) {
+            finalList.add(gson.toJson(item));
+        }
+        System.out.println(finalList);
+        return gson.toJson(finalList);
     }
 
     String loginSearch(String phone) {

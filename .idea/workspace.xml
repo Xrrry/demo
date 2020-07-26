@@ -7,13 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44a503d0-5d5a-4ca4-99e2-62f60a1f4279" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mylog.log.2020-07-06.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mylog.log.2020-07-20.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mylog.log" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bean/Saler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bean/Saler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylog.log.2020-07-06.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
@@ -75,7 +73,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/WeChat Files/xryxryxryxryxryxryx/FileStorage/File/2020-03/新建文件夹 (2)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
@@ -200,6 +198,8 @@
       <workItem from="1592752314888" duration="3061000" />
       <workItem from="1594048479393" duration="1483000" />
       <workItem from="1595253646491" duration="3433000" />
+      <workItem from="1595257186322" duration="62000" />
+      <workItem from="1595765265234" duration="6750000" />
     </task>
     <task id="LOCAL-00001" summary="二级api基本打通/返回格式处理">
       <created>1590501646307</created>
@@ -292,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594049935721</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ranklist格式处理及排序">
+      <created>1595257231444</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1595257231444</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +343,7 @@
     <MESSAGE value="SellHistory/OutHistory完成" />
     <MESSAGE value="修改个人信息完成" />
     <MESSAGE value="身份model同步修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="身份model同步修改" />
+    <MESSAGE value="ranklist格式处理及排序" />
+    <option name="LAST_COMMIT_MESSAGE" value="ranklist格式处理及排序" />
   </component>
 </project>
