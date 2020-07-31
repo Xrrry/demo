@@ -20,7 +20,7 @@ public class SearchDetail {
     private String com_price; //商品价格
     private String com_place; //产品产地
     private Integer all_sell_count; //所有卖出次数
-    private List<String> all_sell_time; //所有卖出时间
+    private String all_his_sell; //所有卖出记录
     //以下先只传最后一次的信息
     private String sell_id; // 卖出信息id
     private String sell_sal_acc; //卖家id

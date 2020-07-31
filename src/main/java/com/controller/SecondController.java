@@ -49,6 +49,7 @@ public class SecondController {
         System.out.println(sellAllResult);
         List<String> ss = sellAlltransform(sellAllResult);
         System.out.println(ss);
+        String hisSell = hisList(ss);
         RequestBody sellFormBody = new FormBody.Builder()
                 .add("sell_id",out.getOut_id())
                 .add("sell_time",ss.get(0)) //应该为size-1
@@ -70,7 +71,7 @@ public class SecondController {
         System.out.println(customer.toString());
         SearchDetail searchDetail = new SearchDetail(out.getOut_id(), out.getCom_id(), out.getPro_acc(),
                 out.getOut_birthday(), producer.getPro_nickname(), commodity.getCom_name(), commodity.getCom_cate(),
-                commodity.getCom_price(),commodity.getCom_place(),ss.size(),ss,sell.getSell_id(),sell.getSell_sal_acc(),saler.getSal_nickname(),
+                commodity.getCom_price(),commodity.getCom_place(),ss.size(),hisSell,sell.getSell_id(),sell.getSell_sal_acc(),saler.getSal_nickname(),
                 saler.getSal_cred(),saler.getSal_cnt(),sell.getSell_time(),
                 sell.getSell_cus_acc(),customer.getCus_nickname(),sell.getSell_track_num());
         System.out.println(searchDetail);
@@ -139,6 +140,31 @@ public class SecondController {
         }
         System.out.println(finalList);
         return gson.toJson(finalList);
+    }
+    String hisList(List<String> tList) {
+        Gson gson = new Gson();
+//        String[] ll = c.split(", ");
+//        List<String> tList = new ArrayList<>();
+//        for(String a : ll){
+//            tList.add(a.replaceAll("[^a-zA-Z0-9\\u4E00-\\u9FA5]", ""));
+//        }
+        HisSell hisSell = new HisSell();
+        List<Sell> hisList = new ArrayList<>();
+        for(String a : tList) {
+            RequestBody sellFormBody = new FormBody.Builder()
+                    .add("sell_id","12300000")
+                    .add("sell_time",a)
+                    .build();
+            String sellResult = transformJson(getJsonData("http://112.126.96.134:8888/test/querySell",sellFormBody));
+            Sell sell = gson.fromJson(sellResult, Sell.class);
+            hisList.add(sell);
+        }
+        hisSell.setHisSellList(hisList);
+        System.out.println(hisSell.toString());
+        String trans = gson.toJson(hisSell);
+        System.out.println(trans);
+        HisSell hissell1 = gson.fromJson(trans, HisSell.class);
+        return trans;
     }
 
     String loginSearch(String phone) {
