@@ -1,6 +1,6 @@
 package com.controller;
 
-import com.bean.Sell;
+import com.bean.HisSellitem;
 import lombok.Data;
 import lombok.ToString;
 
@@ -9,5 +9,5 @@ import java.util.List;
 @Data
 @ToString
 public class HisSell {
-    private List<Sell> hisSellList;
+    private List<HisSellitem> hisSellList;
 }

@@ -1,6 +1,7 @@
 com\bean\Customer.class
 com\bean\Producer.class
 com\controller\SecondController.class
+com\bean\HisQuery.class
 com\server\MyGetMethod.class
 com\bean\Commodity.class
 com\config\SwaggerConfig.class
@@ -8,6 +9,7 @@ com\bean\Saler.class
 com\bean\SearchDetail.class
 com\bean\Sell.class
 com\bean\User.class
+com\bean\HisQueryitem.class
 com\server\MyPostMethod.class
 com\controller\Demo.class
 hello\Application.class

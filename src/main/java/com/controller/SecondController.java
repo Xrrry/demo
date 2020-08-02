@@ -49,31 +49,33 @@ public class SecondController {
         System.out.println(sellAllResult);
         List<String> ss = sellAlltransform(sellAllResult);
         System.out.println(ss);
-        String hisSell = hisList(ss);
-        RequestBody sellFormBody = new FormBody.Builder()
-                .add("sell_id",out.getOut_id())
-                .add("sell_time",ss.get(0)) //应该为size-1
+        String hisSell = hisSellList(ss, out_id);
+//        RequestBody sellFormBody = new FormBody.Builder()
+//                .add("sell_id",out.getOut_id())
+//                .add("sell_time",ss.get(0)) //应该为size-1
+//                .build();
+//        String sellResult = transformJson(getJsonData("http://112.126.96.134:8888/test/querySell",sellFormBody));
+//        Sell sell = gson.fromJson(sellResult, Sell.class);
+//        RequestBody salerFormBody = new FormBody.Builder()
+//                .add("sal_acc",sell.getSell_sal_acc())
+//                .build();
+//        RequestBody customerFormBody = new FormBody.Builder()
+//                .add("cus_acc",sell.getSell_cus_acc())
+//                .build();
+        RequestBody hisQueryFormBody = new FormBody.Builder()
+                .add("his_out_id",out_id)
                 .build();
-        String sellResult = transformJson(getJsonData("http://112.126.96.134:8888/test/querySell",sellFormBody));
-        Sell sell = gson.fromJson(sellResult, Sell.class);
-        System.out.println(sell.toString());
-        RequestBody salerFormBody = new FormBody.Builder()
-                .add("sal_acc",sell.getSell_sal_acc())
-                .build();
-        RequestBody customerFormBody = new FormBody.Builder()
-                .add("cus_acc",sell.getSell_cus_acc())
-                .build();
-        String salerResult = transformJson(getJsonData("http://112.126.96.134:8888/test/querySaler",salerFormBody));
-        Saler saler = gson.fromJson(salerResult,Saler.class);
-        System.out.println(saler.toString());
-        String customerResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryCustomer",customerFormBody));
-        Customer customer = gson.fromJson(customerResult,Customer.class);
-        System.out.println(customer.toString());
+        String hisQueryResult = getJsonData("http://112.126.96.134:8888/test/queryAllHistory",hisQueryFormBody);
+//        String salerResult = transformJson(getJsonData("http://112.126.96.134:8888/test/querySaler",salerFormBody));
+//        Saler saler = gson.fromJson(salerResult,Saler.class);
+//        System.out.println(saler.toString());
+//        String customerResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryCustomer",customerFormBody));
+//        Customer customer = gson.fromJson(customerResult,Customer.class);
+//        System.out.println(customer.toString());
+        String hisQuery = hisQueryList(hisQueryResult);
         SearchDetail searchDetail = new SearchDetail(out.getOut_id(), out.getCom_id(), out.getPro_acc(),
                 out.getOut_birthday(), producer.getPro_nickname(), commodity.getCom_name(), commodity.getCom_cate(),
-                commodity.getCom_price(),commodity.getCom_place(),ss.size(),hisSell,sell.getSell_id(),sell.getSell_sal_acc(),saler.getSal_nickname(),
-                saler.getSal_cred(),saler.getSal_cnt(),sell.getSell_time(),
-                sell.getSell_cus_acc(),customer.getCus_nickname(),sell.getSell_track_num());
+                commodity.getCom_price(),commodity.getCom_place(),hisSell,hisQuery);
         System.out.println(searchDetail);
         return gson.toJson(searchDetail);
     }
@@ -141,15 +143,10 @@ public class SecondController {
         System.out.println(finalList);
         return gson.toJson(finalList);
     }
-    String hisList(List<String> tList) {
+    String hisSellList(List<String> tList, String sell_id) {
         Gson gson = new Gson();
-//        String[] ll = c.split(", ");
-//        List<String> tList = new ArrayList<>();
-//        for(String a : ll){
-//            tList.add(a.replaceAll("[^a-zA-Z0-9\\u4E00-\\u9FA5]", ""));
-//        }
         HisSell hisSell = new HisSell();
-        List<Sell> hisList = new ArrayList<>();
+        List<HisSellitem> hisList = new ArrayList<>();
         for(String a : tList) {
             RequestBody sellFormBody = new FormBody.Builder()
                     .add("sell_id","12300000")
@@ -157,13 +154,39 @@ public class SecondController {
                     .build();
             String sellResult = transformJson(getJsonData("http://112.126.96.134:8888/test/querySell",sellFormBody));
             Sell sell = gson.fromJson(sellResult, Sell.class);
-            hisList.add(sell);
+            System.out.println(sell.toString());
+            RequestBody salerFormBody = new FormBody.Builder()
+                    .add("sal_acc",sell.getSell_sal_acc())
+                    .build();
+            RequestBody customerFormBody = new FormBody.Builder()
+                    .add("cus_acc",sell.getSell_cus_acc())
+                    .build();
+            String salerResult = transformJson(getJsonData("http://112.126.96.134:8888/test/querySaler",salerFormBody));
+            Saler saler = gson.fromJson(salerResult,Saler.class);
+            String customerResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryCustomer",customerFormBody));
+            Customer customer = gson.fromJson(customerResult,Customer.class);
+            HisSellitem hisSellitem = new HisSellitem(sell.getId(),sell.getSell_id(),sell.getSell_time(),sell.getSell_sal_acc(),
+                    saler.getSal_nickname(),saler.getSal_cred(),sell.getSell_cus_acc(),customer.getCus_nickname(),sell.getSell_track_num());
+            hisList.add(hisSellitem);
         }
         hisSell.setHisSellList(hisList);
         System.out.println(hisSell.toString());
         String trans = gson.toJson(hisSell);
         System.out.println(trans);
-        HisSell hissell1 = gson.fromJson(trans, HisSell.class);
+//        HisSell hissell1 = gson.fromJson(trans, HisSell.class);
+        return trans;
+    }
+    String hisQueryList(String s) {
+        Gson gson = new Gson();
+        HisQuery hisQuery = new HisQuery();
+        List<HisQueryitem> hisList = new ArrayList<>();
+        List<String> ll = listTransform(s);
+        for (String item : ll) {
+            hisList.add(gson.fromJson(item, HisQueryitem.class));
+        }
+        hisQuery.setHisQueryList(hisList);
+        System.out.println(hisQuery.toString());
+        String trans = gson.toJson(hisQuery);
         return trans;
     }
 
@@ -242,7 +265,6 @@ public class SecondController {
         return getJsonData("http://112.126.96.134:8888/test/upCommodity",upFormBody);
     }
     public List<String> sellAlltransform(String s){
-        int count = Integer.parseInt(s.substring(6,7));
         String[] sList = s.split("value3=");
         List<String> sResult = new ArrayList<String>();
         for (int i=1;i<sList.length;i++) {
@@ -252,7 +274,6 @@ public class SecondController {
         return sResult;
     }
     public List<String> listTransform(String s) {
-        int count = Integer.parseInt(s.substring(6,7));
         String ss = s.substring(8);
         String[] sList = ss.split("}");
         List<String> sResult = new ArrayList<String>();
