@@ -115,4 +115,14 @@ public class Demo {
         SecondController s = new SecondController();
         return s.rank();
     }
+    @RequestMapping(value = "/test",method = RequestMethod.POST) // 修改
+    public String test(@RequestParam String str){
+        SecondController s = new SecondController();
+        return s.test(str);
+    }
+    @RequestMapping(value = "/newcus",method = RequestMethod.POST) // 修改
+    public String newcus(@RequestParam String acc, String name){
+        SecondController s = new SecondController();
+        return s.newcus(acc, name);
+    }
 }

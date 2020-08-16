@@ -18,8 +18,19 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.sql.SQLOutput;
 import java.util.*;
+import java.util.Base64;
+import java.io.UnsupportedEncodingException;
 
 public class SecondController {
+
+    public String test(String str) {
+        try {
+            return Base64.getEncoder().encodeToString(str.getBytes("UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
 
     public String query(String out_id){
         Gson gson = new Gson();
@@ -209,6 +220,13 @@ public class SecondController {
                 .add("content",content)
                 .build();
         return getJsonData("http://112.126.96.134:8888/test/upContent",feedbackFormBody);
+    }
+    public String newcus(String acc, String name) {
+        RequestBody upCusFormBody = new FormBody.Builder()
+                .add("cus_acc",acc)
+                .add("cus_nickname",name)
+                .build();
+        return getJsonData("http://112.126.96.134:8888/test/upCustomer",upCusFormBody);
     }
     String modi(String type, String user_id, String nickname) {
         if(type.equals("1")) {
