@@ -125,4 +125,9 @@ public class Demo {
         SecondController s = new SecondController();
         return s.newcus(acc, name);
     }
+    @RequestMapping(value = "/comment",method = RequestMethod.POST) // 修改
+    public String comment(@RequestParam String sal_acc, String sal_nickname, String sal_cred, String sal_cnt, String sal_total){
+        SecondController s = new SecondController();
+        return s.comment(sal_acc, sal_nickname, sal_cred, sal_cnt, sal_total);
+    }
 }

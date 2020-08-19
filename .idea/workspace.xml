@@ -8,9 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="44a503d0-5d5a-4ca4-99e2-62f60a1f4279" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.log" beforeDir="false" afterPath="$PROJECT_DIR$/mylog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.log.2020-08-01.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylog.log.2020-08-02.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bean/HisSellitem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bean/HisSellitem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Demo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/SecondController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/Demo.class" afterDir="false" />
@@ -205,7 +203,9 @@
       <workItem from="1596210258921" duration="4713000" />
       <workItem from="1596379523531" duration="6206000" />
       <workItem from="1596809432650" duration="27000" />
-      <workItem from="1597587998691" duration="2091000" />
+      <workItem from="1597587998691" duration="2223000" />
+      <workItem from="1597831623684" duration="123000" />
+      <workItem from="1597832304080" duration="2774000" />
     </task>
     <task id="LOCAL-00001" summary="二级api基本打通/返回格式处理">
       <created>1590501646307</created>
@@ -326,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596385975350</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="新用户昵称自动生成及上传">
+      <created>1597590485096</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1597590485096</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,6 +381,7 @@
     <MESSAGE value="ranklist完成" />
     <MESSAGE value="HisSell结构调整" />
     <MESSAGE value="SearchDetail/HisQueryList/HisSellList结构调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="SearchDetail/HisQueryList/HisSellList结构调整" />
+    <MESSAGE value="新用户昵称自动生成及上传" />
+    <option name="LAST_COMMIT_MESSAGE" value="新用户昵称自动生成及上传" />
   </component>
 </project>

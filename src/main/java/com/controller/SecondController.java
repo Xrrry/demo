@@ -177,7 +177,8 @@ public class SecondController {
             String customerResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryCustomer",customerFormBody));
             Customer customer = gson.fromJson(customerResult,Customer.class);
             HisSellitem hisSellitem = new HisSellitem(sell.getId(),sell.getSell_id(),sell.getSell_time(),sell.getSell_sal_acc(),
-                    saler.getSal_nickname(),saler.getSal_cred(),sell.getSell_cus_acc(),customer.getCus_nickname(),sell.getSell_track_num());
+                    saler.getSal_nickname(),saler.getSal_cred(),sell.getSell_cus_acc(),customer.getCus_nickname(),sell.getSell_track_num(),
+                    saler.getSal_cnt(),saler.getSal_total());
             hisList.add(hisSellitem);
         }
         hisSell.setHisSellList(hisList);
@@ -220,6 +221,16 @@ public class SecondController {
                 .add("content",content)
                 .build();
         return getJsonData("http://112.126.96.134:8888/test/upContent",feedbackFormBody);
+    }
+    String comment(String sal_acc, String sal_nickname, String sal_cred, String sal_cnt, String sal_total) {
+        RequestBody upFormBody = new FormBody.Builder()
+                .add("sal_acc",sal_acc)
+                .add("sal_nickname",sal_nickname)
+                .add("sal_cred", sal_cred)
+                .add("sal_cnt", sal_cnt)
+                .add("sal_total",sal_total)
+                .build();
+        return getJsonData("http://112.126.96.134:8888/test/updateSaler",upFormBody);
     }
     public String newcus(String acc, String name) {
         RequestBody upCusFormBody = new FormBody.Builder()
