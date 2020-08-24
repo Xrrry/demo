@@ -206,12 +206,13 @@ public class SecondController {
         RequestBody loginFormBody = new FormBody.Builder()
                 .add("user_id",phone)
                 .build();
-        return transformJson(getJsonData("http://112.126.96.134:8888/test/queryUser",loginFormBody));
+        return getJsonData("http://112.126.96.134:8888/test/queryUser",loginFormBody);
     }
     String auth(String user_id,String type,String content) {
         RequestBody authFormBody = new FormBody.Builder()
                 .add("user_id",user_id)
                 .add("user_type",type)
+                .add("certify",content)
                 .build();
         return getJsonData("http://112.126.96.134:8888/test/upTempUser",authFormBody);
     }
@@ -237,7 +238,39 @@ public class SecondController {
                 .add("cus_acc",acc)
                 .add("cus_nickname",name)
                 .build();
+        RequestBody upUserFormBody = new FormBody.Builder()
+                .add("user_id",acc)
+                .add("user_type","1")
+                .build();
+        System.out.println(getJsonData("http://112.126.96.134:8888/test/upUser",upUserFormBody));
         return getJsonData("http://112.126.96.134:8888/test/upCustomer",upCusFormBody);
+    }
+    public String searchname(String phone, String type){
+        Gson gson = new Gson();
+        if(type.equals("1")) {
+            RequestBody searchFormBody = new FormBody.Builder()
+                    .add("cus_acc",phone)
+                    .build();
+            String r = transformJson(getJsonData("http://112.126.96.134:8888/test/queryCustomer",searchFormBody));
+            Customer customer = gson.fromJson(r, Customer.class);
+            return customer.getCus_nickname();
+        }
+        else if (type.equals("2")) {
+            RequestBody searchFormBody = new FormBody.Builder()
+                    .add("sal_acc",phone)
+                    .build();
+            String r = transformJson(getJsonData("http://112.126.96.134:8888/test/querySaler",searchFormBody));
+            Saler saler = gson.fromJson(r, Saler.class);
+            return saler.getSal_nickname();
+        }
+        else {
+            RequestBody searchFormBody = new FormBody.Builder()
+                    .add("pro_acc",phone)
+                    .build();
+            String r = transformJson(getJsonData("http://112.126.96.134:8888/test/queryProducer",searchFormBody));
+            Producer producer = gson.fromJson(r, Producer.class);
+            return producer.getPro_nickname();
+        }
     }
     String modi(String type, String user_id, String nickname) {
         if(type.equals("1")) {

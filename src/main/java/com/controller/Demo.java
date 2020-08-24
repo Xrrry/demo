@@ -130,4 +130,9 @@ public class Demo {
         SecondController s = new SecondController();
         return s.comment(sal_acc, sal_nickname, sal_cred, sal_cnt, sal_total);
     }
+    @RequestMapping(value = "/searchname",method = RequestMethod.POST) // 修改
+    public String searchname(@RequestParam String phone, String type){
+        SecondController s = new SecondController();
+        return s.searchname(phone, type);
+    }
 }
