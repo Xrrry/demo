@@ -73,9 +73,9 @@ public class Demo {
     }
 
     @RequestMapping(value = "/upOut",method = RequestMethod.POST) // 厂商上传出库
-    public String upOut (@RequestParam String out_id,String pro_acc, String com_id, String out_time){
+    public String upOut (@RequestParam String out_id,String pro_acc, String com_id, String out_time, String com_name){
         SecondController s = new SecondController();
-        return s.upOut(out_id,pro_acc,com_id,out_time);
+        return s.upOut(out_id,pro_acc,com_id,out_time,com_name);
     }
 
     @RequestMapping(value = "/upSell",method = RequestMethod.POST) // 卖出

@@ -87,7 +87,13 @@ public class SecondController {
 //        String customerResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryCustomer",customerFormBody));
 //        Customer customer = gson.fromJson(customerResult,Customer.class);
 //        System.out.println(customer.toString());
-        String hisQuery = hisQueryList(hisQueryResult);
+        String hisQuery = "";
+        if (hisQueryResult.equals("count=0")) {
+            hisQuery = "count=0";
+        }
+        else{
+            hisQuery = hisQueryList(hisQueryResult);
+        }
         SearchDetail searchDetail = new SearchDetail(out.getOut_id(), out.getCom_id(), out.getPro_acc(),
                 out.getOut_birthday(), producer.getPro_nickname(), commodity.getCom_name(), commodity.getCom_cate(),
                 commodity.getCom_price(),commodity.getCom_place(),hisSell,hisQuery);
@@ -147,17 +153,28 @@ public class SecondController {
                 .build();
         return transformJson(getJsonData("http://112.126.96.134:8888/test/queryAllCommodity",comFormBody));
     }
-    String upOut(String out_id,String pro_acc, String com_id, String out_time) {
+    String upOut(String out_id,String pro_acc, String com_id, String out_time, String com_name) {
         RequestBody outFormBody = new FormBody.Builder()
                 .add("out_id",out_id)
                 .add("pro_acc",pro_acc)
                 .add("com_id",com_id)
                 .add("out_birthday",out_time)
                 .build();
-        return getJsonData("http://112.126.96.134:8888/test/upOut",outFormBody);
+        RequestBody perFormBody = new FormBody.Builder()
+                .add("pro_acc",pro_acc)
+                .add("his_time",out_time)
+                .add("out_id",out_id)
+                .add("com_name",com_name)
+                .build();
+        String result1 = getJsonData("http://112.126.96.134:8888/test/upOut",outFormBody);
+        System.out.println(result1);
+        String result2 = getJsonData("http://112.126.96.134:8888/test/upOutHistory",perFormBody);
+        System.out.println(result2);
+        return result2;
     }
     String upSell(String sell_id, String sell_time, String sell_sal_acc, String sell_cus_acc,
                   String sell_track_num) {
+        Gson gson = new Gson();
         RequestBody sellFormBody = new FormBody.Builder()
                 .add("sell_id",sell_id)
                 .add("sell_time",sell_time)
@@ -165,7 +182,28 @@ public class SecondController {
                 .add("sell_cus_acc",sell_cus_acc)
                 .add("sell_track_num",sell_track_num)
                 .build();
-        return getJsonData("http://112.126.96.134:8888/test/upSell",sellFormBody);
+        String result = getJsonData("http://112.126.96.134:8888/test/upSell",sellFormBody);
+        System.out.println(result);
+        RequestBody queryOutFormBody = new FormBody.Builder()
+                .add("out_id",sell_id)
+                .build();
+        String outResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryOut",queryOutFormBody));
+        Out out = gson.fromJson(outResult,Out.class);
+        RequestBody querycommFormBody = new FormBody.Builder()
+                .add("pro_acc",out.getPro_acc())
+                .add("com_id",out.getCom_id())
+                .build();
+        String commodityResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryCommodity",querycommFormBody));
+        Commodity commodity = gson.fromJson(commodityResult,Commodity.class);
+        RequestBody perFormBody = new FormBody.Builder()
+                .add("sal_acc",sell_sal_acc)
+                .add("his_time",sell_time)
+                .add("out_id",sell_id)
+                .add("com_name",commodity.getCom_name())
+                .build();
+        String result2 = getJsonData("http://112.126.96.134:8888/test/upSellHistory",perFormBody);
+        System.out.println(result2);
+        return result2;
     }
     String rank(){
         RequestBody rankFormBody = new FormBody.Builder().build();
@@ -191,7 +229,7 @@ public class SecondController {
         List<HisSellitem> hisList = new ArrayList<>();
         for(String a : tList) {
             RequestBody sellFormBody = new FormBody.Builder()
-                    .add("sell_id","12300000")
+                    .add("sell_id",sell_id)
                     .add("sell_time",a)
                     .build();
             String sellResult = transformJson(getJsonData("http://112.126.96.134:8888/test/querySell",sellFormBody));
