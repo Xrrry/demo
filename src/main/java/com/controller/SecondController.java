@@ -32,12 +32,16 @@ public class SecondController {
         return "";
     }
 
-    public String query(String out_id){
+    public String query(String out_id, String user_id, String type){
         Gson gson = new Gson();
         RequestBody outFormBody = new FormBody.Builder()
                 .add("out_id",out_id)
                 .build();
-        String outResult = transformJson(getJsonData("http://112.126.96.134:8888/test/queryOut",outFormBody));
+        String outTResult = getJsonData("http://112.126.96.134:8888/test/queryOut",outFormBody);
+        if (outTResult.equals("不存在")) {
+            return "不存在";
+        }
+        String outResult = transformJson(outTResult);
         Out out = gson.fromJson(outResult, Out.class);
         System.out.println(out.toString());
         RequestBody commodityFormBody = new FormBody.Builder()
@@ -88,7 +92,34 @@ public class SecondController {
                 out.getOut_birthday(), producer.getPro_nickname(), commodity.getCom_name(), commodity.getCom_cate(),
                 commodity.getCom_price(),commodity.getCom_place(),hisSell,hisQuery);
         System.out.println(searchDetail);
+        if(type.equals("1")){
+            System.out.println("uphistory");
+            queryElse(searchDetail, user_id);
+        }
+        else {
+            System.out.println("nouphistory");
+        }
         return gson.toJson(searchDetail);
+    }
+    void queryElse(SearchDetail searchDetail, String user_id) {
+        Long timeStamp = System.currentTimeMillis();  //获取当前时间戳
+        String time = String.valueOf(timeStamp);
+        time = time.substring(0,10);
+        RequestBody upHistoryFormBody = new FormBody.Builder()
+                .add("his_out_id",searchDetail.getOut_id())
+                .add("his_time",time)
+                .add("his_cus_acc",user_id)
+                .build();
+        String upHistoryResult = getJsonData("http://112.126.96.134:8888/test/upHistory",upHistoryFormBody);
+        System.out.println(upHistoryResult);
+        RequestBody upPerHistoryFormBody = new FormBody.Builder()
+                .add("cus_acc",user_id)
+                .add("his_time",time)
+                .add("out_id",searchDetail.getOut_id())
+                .add("com_name",searchDetail.getCom_name())
+                .build();
+        String upPerHistoryResult = getJsonData("http://112.126.96.134:8888/test/upPerHistory",upPerHistoryFormBody);
+        System.out.println(upPerHistoryResult);
     }
 
     String perAllHistory(String cus_acc) {

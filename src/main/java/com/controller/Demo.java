@@ -40,14 +40,14 @@ public class Demo {
     }
 
     @RequestMapping(value = "/query",method = RequestMethod.POST) // 用户查询
-    public String query(@RequestParam String out_id){
+    public String query(@RequestParam String out_id, String user_id){
         SecondController s = new SecondController();
-        return s.query(out_id);
+        return s.query(out_id,user_id,"1");
     }
     @RequestMapping(value = "/queryHistory",method = RequestMethod.POST) // 历史查询
-    public String queryHistory(@RequestParam String out_id){
+    public String queryHistory(@RequestParam String out_id, String user_id){
         SecondController s = new SecondController();
-        return s.query(out_id);
+        return s.query(out_id,user_id,"2");
     }
 
     @RequestMapping(value = "/perHistory",method = RequestMethod.POST) // 查询记录
